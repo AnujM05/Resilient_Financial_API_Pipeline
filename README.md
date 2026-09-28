@@ -1,7 +1,7 @@
 # Resilient Financial Data Pipeline (ETL) & Analytics Engine
 
 ## 📌 The Business Problem
-Financial analysts and quantitative researchers require reliable, daily market data to generate trading signals and assess risk. However, standard third-party API pipelines are inherently fragile—crashing during server timeouts, failing on rate limits, or creating catastrophic duplicate records if executed twice. This unreliability forces data engineers to manually babysit data extraction, delaying critical financial intelligence.
+Financial analysts and quantitative researchers require reliable, daily market data to generate trading signals and assess risk. However, standard third-party API pipelines are inherently fragile crashing during server timeouts, failing on rate limits, or creating catastrophic duplicate records if executed twice. This unreliability forces data engineers to manually babysit data extraction, delaying critical financial intelligence.
 
 This project is an automated, production-grade ETL (Extract, Transform, Load) pipeline built to solve these exact issues. It ensures fault-tolerant data ingestion, enforces strict schema contracts, prevents database duplication, and automatically generates quantitative trading signals.
 
@@ -34,7 +34,7 @@ Once warehoused, the raw price data is processed by a secondary PostgreSQL analy
 To achieve a "hands-off" production state, I wrapped the Python execution logic into a lightweight Windows Batch script (`.bat`). This was integrated directly into Windows Task Scheduler, orchestrating the pipeline to run silently in the background every evening at 6:00 PM after the US financial markets close.
 
 ## 🚀 Business Impact
-This architecture successfully automates the daily ingestion of market data with 100% reliability and zero data duplication. By shifting from manual extraction to automated fault tolerance, it guarantees continuous data flow. Furthermore, the SQL analytics engine successfully transitioned raw data into actionable insights—such as automatically flagging a massive 5.68% intraday volatility anomaly during the September 11 trading session—proving its immediate value for institutional research.
+This architecture successfully automates the daily ingestion of market data with 100% reliability and zero data duplication. By shifting from manual extraction to automated fault tolerance, it guarantees continuous data flow. Furthermore, the SQL analytics engine successfully transitioned raw data into actionable insights such as automatically flagging a massive 5.68% intraday volatility anomaly during the September 11 trading session proving its immediate value for institutional research.
 
 ## 💼 Financial Mechanics & Operational Handoff
 To bridge the gap between backend data engineering and frontend financial operations, this architecture is designed to hand off specific data models to business users.
