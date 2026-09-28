@@ -1,0 +1,12 @@
+# Environment credentials
+.env
+
+# Python / Jupyter artifacts
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+.venv/
+env/
